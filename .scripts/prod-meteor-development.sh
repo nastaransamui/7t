@@ -1,0 +1,1 @@
+meteor run --port 3000 --settings settings-development.json $@ # forward shell parameters to meteor run
