@@ -9,7 +9,9 @@ import { StylesProvider, jssPreset } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import LoadingBar from 'react-top-loading-bar';
 import Entrance from './Entrance';
-import Contact from './components/Forms/Contact'
+import Contact from './components/Forms/Contact';
+import Portfolio from './components/Portfolio/Portfolio';
+import SingleProject from "./components/Project/SingleProject";
 import { Info } from './Info.jsx';
 let themeType = 'light';
 if (typeof Storage !== 'undefined') { // eslint-disable-line
@@ -63,6 +65,10 @@ function App(props){
              onToggleDark={toggleDarkTheme} />)} />
              <Route exact path="/contact" render={()=>(<Contact
               history={props.history} />)} />
+              <Route exact path="/portfolio" render={()=>(<Portfolio
+               history={props.history} />)} />
+               <Route exact path="/project" render={()=>(<SingleProject
+                history={props.history} />)} />
           </Switch>
         </Router>
         </div>

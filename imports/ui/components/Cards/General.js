@@ -12,7 +12,9 @@ export default function General(props){
   const {
     img,
     title,
-    desc
+    desc,
+    history,
+    _id
   } = props;
   return(
     <Paper className={classes.generalCard}>
@@ -24,7 +26,16 @@ export default function General(props){
         <Typography className={text.paragraph}>
           {desc}
         </Typography>
-        <Button className={classes.button} color="secondary" size="small" variant="contained">
+        <Button className={classes.button} 
+        color="secondary" 
+        size="small" 
+        variant="contained"
+        onClick={()=>{
+          history.push({
+            pathname: `/project`,
+            search: `?_id=${_id}`,
+          })
+        }}>
           See Detail
         </Button>
       </Paper>
@@ -36,4 +47,6 @@ General.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
+  history: PropTypes.object.isRequired,
+  _id: PropTypes.string.isRequired,
 };

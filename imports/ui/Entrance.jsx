@@ -69,13 +69,13 @@ function Entrance(props){
         <VideoBanner history={props.history}/>
       </section>
       <section id="services" className={classes.spaceTopShort}>
-         <Services />
+         <Services history={props.history}/>
       </section>
       <section id="project" className={isMobile ? classes.spaceTopShort : classes.spaceTop}>
-        <Project />
+        <Project history={props.history}/>
       </section>
       <section id="featured" className={isMobile ? classes.spaceTopShort : classes.spaceTop}>
-        <Featured />
+        <Featured history={props.history}/>
       </section>
       <section id="about">
         <div className={isTablet ? classes.spaceTopShort : classes.spaceTop}>

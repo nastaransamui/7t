@@ -87,7 +87,6 @@ function Banner(props){
       <Container fixed={!isMobile} className={classes.bannerWrap}>
         <div className={classes.video}>
           <div className={classes.overlay} />
-          {/* {!play || isMobile ? <img src={imgAPI.architect[0]} alt="cover" /> : null} */}
           <YouTube
              videoId="TA04Qau-UnA"
               opts={opts}
@@ -111,8 +110,8 @@ function Banner(props){
                 </Typography>
                 <Button color="primary" size="large" variant="contained" 
                 className={classes.button} 
-                onClick={()=>props.history.push('/aboutus')}>
-                  see more
+                onClick={()=>props.history.push('/portfolio')}>
+                  portfolio
                 </Button>
                 </Paper>
               </div>

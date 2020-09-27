@@ -30,7 +30,7 @@ function Services(props){
           </svg>
         </div>
         <Typography variant="h5" className={text.subtitle2}>
-          Schematic Design
+          Commercial Builder
         </Typography>
         <Typography component="p" className={text.paragraph}>
           Your architect will begin by preparing design sketches based on your requirements and budget to explore possible options.
@@ -46,7 +46,7 @@ function Services(props){
               </svg>
           </div>
           <Typography variant="h5" className={text.subtitle2}>
-            Working with an Architect
+            Residential Builder
           </Typography>
           <Typography component="p" className={text.paragraph}>
             An architect does a lot more than just provide you with a set of drawings, they will guide you through the planning process
@@ -66,7 +66,7 @@ function Services(props){
               </svg>
           </div>
           <Typography variant="h5" className={text.subtitle2}>
-            Architectural Technology
+            Estimating And Quantity Surveying
           </Typography>
           <Typography component="p" className={text.paragraph}>
             Our technology develop specialisations in particular areas, such as specification writing, technology, materials, and regulations

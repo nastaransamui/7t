@@ -15,8 +15,8 @@ import GeneralCard from '../Cards/General';
 import useStyle from './project-style';
 import IosArrowBack from 'react-ionicons/lib/IosArrowBack';
 import IosArrowForward from 'react-ionicons/lib/IosArrowForward';
-
-const projectData = [
+import Projects from "../Portfolio/Projects";
+const ProjectsData = [
   {
     img: imgAPI.architect[1],
     title: 'Vivamus sit amet',
@@ -84,7 +84,7 @@ function Project(props){
   };
   useEffect(() => {
     if (theme.direction === 'rtl') {
-      const lastSlide = Math.floor(projectData.length - 2);
+      const lastSlide = Math.floor(Projects.length - 2);
       slider.current.slickGoTo(lastSlide);
     }
   }, []);
@@ -110,10 +110,15 @@ function Project(props){
                 <div />
               </div>
             )}
-              {projectData.map((item, index) =>{
+              {Projects.map((item, index) =>{
                 return(
                   <div key={index.toString()} className={classes.item}>
-                    <GeneralCard img={item.img} title={item.title} desc={item.desc} />
+                    <GeneralCard 
+                    img={item.Images[0]} 
+                    title={item.name} 
+                    desc=''
+                    history={props.history}
+                    _id={item._id} />
                   </div>
                 )
               })}
