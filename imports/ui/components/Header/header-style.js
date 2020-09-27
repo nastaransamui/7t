@@ -145,10 +145,10 @@ const headerStyles = makeStyles(theme => ({
       height: 70,
       margin: '0 auto',
       marginBottom: theme.spacing(),
-      [theme.breakpoints.down('sm')]: {
+      
         height: 48,
         width: 48
-      }
+      
     }
   },
   active: {},
@@ -182,8 +182,8 @@ const headerStyles = makeStyles(theme => ({
         '& a': {
           textTransform: 'uppercase',
           minWidth: 0,
-          padding: '6px',
-          margin: '0 4px',
+          padding: '3px',
+          margin: '0 2px',
           background: 'none !important',
           transition: 'all 0.3s ease-out',
           '&:after': {

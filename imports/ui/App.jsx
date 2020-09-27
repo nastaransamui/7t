@@ -9,6 +9,7 @@ import { StylesProvider, jssPreset } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import LoadingBar from 'react-top-loading-bar';
 import Entrance from './Entrance';
+import Contact from './components/Forms/Contact'
 import { Info } from './Info.jsx';
 let themeType = 'light';
 if (typeof Storage !== 'undefined') { // eslint-disable-line
@@ -40,24 +41,31 @@ function App(props){
   },[])
   const muiTheme = createMuiTheme(theme);
   const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
-  
+  const location = useLocation();
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   return(
     <React.Fragment >
       <StylesProvider jss={jss}>
       <MuiThemeProvider theme={muiTheme}>
         <CssBaseline />
         <LoadingBar
-          height={3}
+          height={loading !== 0 ? 3 : 0}
           color={theme.palette.primary.main}
           progress={loading}
         />
+        <div id="main-wrap">
         <Router history={props.history}>
           <Switch>
             <Route exact path="/" render={()=>(<Entrance
              history={props.history}
              onToggleDark={toggleDarkTheme} />)} />
+             <Route exact path="/contact" render={()=>(<Contact
+              history={props.history} />)} />
           </Switch>
         </Router>
+        </div>
       </MuiThemeProvider>
       </StylesProvider>
   </React.Fragment>

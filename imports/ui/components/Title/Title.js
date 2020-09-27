@@ -10,7 +10,7 @@ export default function Title(props) {
   const text = useText();
   const { head, desc, dark } = props;
   return (
-    <div className={clsx(classes.title, dark && classes.dark)}>
+    <div className={clsx(classes.title, dark && classes.dark)} style={{whiteSpace: 'pre-line'}}>
       <Typography variant="h4" className={text.title2}>
         {head}
       </Typography>

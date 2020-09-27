@@ -132,7 +132,7 @@ function Header(props){
                     )
                   })}
                   <li>
-                    <Button href={routeLink.contact}>
+                    <Button onClick={()=>{props.history.push('/contact')}} style={{color: '#fff'}} >
                           contact
                       </Button>
                   </li>
