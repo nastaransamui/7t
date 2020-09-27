@@ -113,7 +113,7 @@ MapContainer.propTypes = {
   google: PropTypes.object.isRequired
 };
 
-const MapWithAMarker = GoogleApiWrapper({ apiKey: 'AIzaSyAvR8chljQ3hG20NY7lc0AG9DsK1IP4Ldg' })(MapContainer);
+const MapWithAMarker = GoogleApiWrapper({ apiKey: '' })(MapContainer);
 
 function Contact(props){
   const classes = useStyles();
