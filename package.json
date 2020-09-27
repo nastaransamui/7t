@@ -20,6 +20,7 @@
     "aws-sdk": "^2.758.0",
     "bcrypt": "^5.0.0",
     "final-form": "^4.20.1",
+    "fontsource-roboto": "^3.0.3",
     "google-maps-react": "^2.0.6",
     "jquery": "^3.5.1",
     "jss": "^10.3.0",

@@ -9,10 +9,10 @@ import {withTheme } from '@material-ui/core/styles';
 import Services from "./components/Services/Services";
 import Project from "./components/Project/Project";
 import Featured from "./components/Featured/Featured";
+import Feature from './components/Feature/Feature'
 import About from './components/About/About';
 import Team from './components/Team/Team';
 import Blog from './components/Blog/Blog';
-import Footer from './components/Footer/Footer';
 import Subscribe from './components/SubscribeForm/SubscribeForm';
 import PageNav from './components/PageNav/PageNav'
 
@@ -76,6 +76,7 @@ function Entrance(props){
       </section>
       <section id="featured" className={isMobile ? classes.spaceTopShort : classes.spaceTop}>
         <Featured history={props.history}/>
+        <Feature history={props.history}/>
       </section>
       <section id="about">
         <div className={isTablet ? classes.spaceTopShort : classes.spaceTop}>
@@ -91,7 +92,6 @@ function Entrance(props){
       <section id="subscribe" className={classes.spaceTopShort}>
         <Subscribe />
       </section>
-          <Footer />
     </main>
         <Hidden mdDown>
           <PageNav />

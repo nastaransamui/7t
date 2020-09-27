@@ -56,7 +56,7 @@ function Team(props){
       <ReactWOW animation="fadeInUpShort" offset={-300} delay="0.2s" duration="0.6s">
         <Title
           head="Our Team"
-          desc="We are skilled on commercial or residential projects,"
+          desc="Our team consist of estimators with over 18 years of experience both onsite and in office. Our estimators experience covers roads, bridges, commercial buildings such as pavilions, libraries, schools and universities, offices, shops, multi-level to mid/high rise apartments, residential single dwelling to multi-unit, townhouses and apartments."
         />
       </ReactWOW>
       <div className={classes.teamWrap}>

@@ -12,7 +12,9 @@ import Entrance from './Entrance';
 import Contact from './components/Forms/Contact';
 import Portfolio from './components/Portfolio/Portfolio';
 import SingleProject from "./components/Project/SingleProject";
-import { Info } from './Info.jsx';
+import Footer from './components/Footer/Footer';
+import ErrorPage from "./_error";
+import 'fontsource-roboto';
 let themeType = 'light';
 if (typeof Storage !== 'undefined') { // eslint-disable-line
   themeType = localStorage.getItem('luxiTheme') || 'light';
@@ -69,7 +71,10 @@ function App(props){
                history={props.history} />)} />
                <Route exact path="/project" render={()=>(<SingleProject
                 history={props.history} />)} />
+                <Route render={() => (
+                <ErrorPage history={props.history} />)} />
           </Switch>
+          <Footer />
         </Router>
         </div>
       </MuiThemeProvider>

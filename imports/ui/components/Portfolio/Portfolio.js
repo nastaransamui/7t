@@ -201,7 +201,7 @@ const FilterProjects = Projects.filter(item =>selected ==='AllWorks' ? item : it
               <Grid item key={index.toString()} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
                 <CardMedia
-                onClick={()=>console.log(Project)}
+                onClick={()=>MoreDetails(Project)}
                   className={classes.cardMedia}
                   style={{cursor: 'pointer'}}
                   image={Project.Images[0]}
